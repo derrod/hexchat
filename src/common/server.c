@@ -695,7 +695,7 @@ timeout_auto_reconnect (server *serv)
 		serv->recondelay_tag = 0;
 		if (!serv->connected && !serv->connecting && serv->server_session)
 		{
-			server_connect (serv, serv->hostname, serv->port, FALSE);
+			server_connect (serv, serv->hostname, serv->port, TRUE);
 		}
 	}
 	return 0;			  /* returning 0 should remove the timeout handler */
